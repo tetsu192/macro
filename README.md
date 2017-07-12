@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
++ macro
 
-Things you may want to cover:
+  DB設計
 
-* Ruby version
+  users table
 
-* System dependencies
 
-* Configuration
+  | Column     | Type        | Option       |
+  |:-----------|------------:|:------------:|
+  | id         | integer     | null:false   |
+  | name       | string      | null:false   |
+  | email      | string      | null:false   |
+  | passward   | string      | null:false   |
 
-* Database creation
+  assosiation
+  * has_many  :menus
 
-* Database initialization
+  menus table
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+  | Column     | Type        | Option       |
+  |:-----------|------------:|:------------:|
+  | id         | integer     | null:false   |
+  | name       | text        |              |
+  | protein    | float       |              |
+  | fat        | float       |              |
+  | carbo      | float       |              |
 
-* Deployment instructions
-
-* ...
+  assosiation
+  * belongs_to  :user
